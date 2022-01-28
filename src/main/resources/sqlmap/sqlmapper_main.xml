@@ -1,0 +1,25 @@
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.server.mapper.MainMapper">
+
+
+<select id="getEmpInfo" resultType="com.example.server.vo.EmpVO">
+	SELECT
+		empno,
+		sal,
+		ename,
+		job
+	FROM emp
+</select>
+
+<select id="getEmp" resultType="com.example.server.vo.EmpVO">
+	SELECT
+		empno,
+		sal,
+		ename,
+		job
+	FROM emp
+	WHERE empno = #{empNo}
+</select>
+	
+
+</mapper>
